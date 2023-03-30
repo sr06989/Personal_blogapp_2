@@ -1,0 +1,6 @@
+{% if user == post.author %}
+<form action="{% url 'blog-delete' post.id %}" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+{% endif %}
